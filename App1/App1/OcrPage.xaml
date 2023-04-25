@@ -2,10 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.OcrPage"
-             Title="OCR page">
+             Title="Scan pagina">
     <StackLayout>
-        <Label Text="Take your picture here"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <Image Source="camera.jpeg"
+               HorizontalOptions="Center"/>
+        <Button Text="Scan maken"
+               HorizontalOptions="Center"/>
+        <Button Text="Scan uploaden"
+               HorizontalOptions="Center"/>
+        <Button Text="Scan verwerken"
+               HorizontalOptions="Center"
+                Clicked="ProcessScan"/>
     </StackLayout>
 </ContentPage>

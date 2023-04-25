@@ -10,16 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ForgottenPasswordCode : ContentPage
+	public partial class ScanHistory : ContentPage
 	{
-		public ForgottenPasswordCode()
+		public ScanHistory()
 		{
 			InitializeComponent();
 		}
 
-		async void toMain(object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new MainPage());
-		}
+		
 	}
 }

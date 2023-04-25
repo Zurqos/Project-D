@@ -16,5 +16,12 @@ namespace App1
 		{
 			InitializeComponent();
 		}
+
+		async void ProcessScan(object sender, EventArgs a)
+		{
+			await Navigation.PushAsync(new ProcessScan());
+		}
 	}
+
+
 }
