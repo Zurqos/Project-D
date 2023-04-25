@@ -12,6 +12,15 @@ namespace App1
         public MainPage()
         {
             InitializeComponent();
+		}
+		async void ocrButton(object sender, EventArgs e)
+        {
+			await Navigation.PushAsync(new OcrPage());
+		}
+
+        async void forgottenPassword(object sender, EventArgs a)
+        {
+            await Navigation.PushAsync(new ForgottenPassword());
         }
-    }
+	}
 }
