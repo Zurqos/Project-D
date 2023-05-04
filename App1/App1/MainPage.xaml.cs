@@ -18,7 +18,11 @@ namespace App1
         {
             await Navigation.PushAsync(new LoginPage());
         }
-        
-        
+
+
+        private async void NavigateButton_OnCLicked2(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SettingPage());
+        }
     }
 }

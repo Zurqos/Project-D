@@ -11,6 +11,7 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
         <Button Text="Sign In" BackgroundColor="Blue" Clicked="NavigateButton_OnCLicked"></Button>
+        <Button Text="Hamburger menu" BackgroundColor="Red" Clicked="NavigateButton_OnCLicked2"></Button>
     </StackLayout>
 
 </ContentPage>

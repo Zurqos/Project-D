@@ -29,5 +29,32 @@ namespace App1
         {
             // Handle when your app resumes
         }
+        private void CallMain()
+        {
+            var SettingPage = new SettingPage();
+            NavigationPage = new NavigationPage(new Home());
+            RootPage = new RootPage();
+            RootPage.Master = SettingPage;
+            RootPage.Detail = NavigationPage;
+            MainPage = RootPage;
+        }
+        public static NavigationPage NavigationPage { get; private set; }
+        public static RootPage RootPage;
+
+        public static bool MenuIsPresented
+         {
+             get
+             {
+                 return RootPage.IsPresented;
+             }
+             set
+             {
+                 RootPage.IsPresented = value;
+             }
+         }
+    }
+
+    internal class Home : Page
+    {
     }
 }
