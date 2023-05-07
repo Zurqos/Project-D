@@ -10,6 +10,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012"/>
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="SettingPageViewModel.cs">
+        <DependentUpon>SettingPage.xaml</DependentUpon>
+      </Compile>
     </ItemGroup>
 </Project>

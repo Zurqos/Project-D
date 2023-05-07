@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.LoginPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStak">
+            <Button Text="Back to Main Page" BackgroundColor="Blue" Clicked="NavigateButton_OnCLicked"></Button>
+            <StackLayout Padding="20" Margin="0,80,0,0">
+                <Label Text="User Name" TextColor="Black"></Label>
+                <Entry Text="" Placeholder="User Name" x:Name = "usereNameInput"></Entry>
+                <Label Text="Password" TextColor="Black"></Label>
+                <Entry Text="" Placeholder="Password" IsPassword="True"></Entry>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

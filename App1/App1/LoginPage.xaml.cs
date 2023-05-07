@@ -3,26 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace App1
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class LoginPage : ContentPage
     {
-        public MainPage()
+        public LoginPage()
         {
             InitializeComponent();
         }
-
+        
         private async void NavigateButton_OnCLicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new LoginPage());
-        }
-
-
-        private async void NavigateButton_OnCLicked2(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SettingPage());
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
