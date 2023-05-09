@@ -30,14 +30,20 @@ namespace App1
                 OnPropertyChanged(nameof(AnalysisResult));
             }
         }
-
+        
+        
         public ocrmodulescreen()
         {
             InitializeComponent();
             BindingContext = this;
             LoadAnalysisResult();
         }
-
+        
+        private async void NavigateButton_OnClicked4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+        
         private async void LoadAnalysisResult()
         {
             // Authenticate with the Computer Vision service
@@ -49,7 +55,8 @@ namespace App1
             // Update the analysis result
             AnalysisResult = result;
         }
-
+        
+        
         static string key = "6f295b68e89441c5bf642e5e176b7662";
         static string endpoint = "https://projectdgroup.cognitiveservices.azure.com/";
 

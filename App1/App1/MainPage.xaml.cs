@@ -30,5 +30,10 @@ namespace App1
         {
             await Navigation.PushAsync(new ocrmodulescreen());
         }
+        
+        private async void NavigateButton_OnClicked4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new scanresultaatpagina());
+        }
     }
 }
