@@ -21,5 +21,10 @@ namespace App1
         {
             await Navigation.PushAsync(new LoggedInPage());
         }
+
+        private async void NavigateButton_ForgotPasswordPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ForgotPasswordPage());
+        }
     }
 }

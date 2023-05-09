@@ -13,6 +13,8 @@
                 <Entry Text="" Placeholder="Password" IsPassword="True"></Entry>
                 <Button Text="Login"
                         Clicked="NavigateButton_OnCLicked"/>
+                <Button Text="Forgot Password"
+                        Clicked="NavigateButton_ForgotPasswordPage"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
