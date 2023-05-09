@@ -11,6 +11,8 @@
                 <Entry Text="" Placeholder="User Name" x:Name = "usereNameInput"></Entry>
                 <Label Text="Password" TextColor="Black"></Label>
                 <Entry Text="" Placeholder="Password" IsPassword="True"></Entry>
+                <Button Text="Login"
+                        Clicked="NavigateButton_OnCLicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

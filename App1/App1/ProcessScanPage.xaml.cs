@@ -10,14 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoggedInPage : ContentPage
+	public partial class ProcessScanPage : ContentPage
 	{
-		public LoggedInPage()
+		public ProcessScanPage ()
 		{
-			InitializeComponent();
+			InitializeComponent ();
 		}
 
-		private async void NavigateButton_OcrPage(object sender, EventArgs e)
+		async void NavigateButton_OcrPage(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new OcrPage());
 		}
