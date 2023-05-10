@@ -7,6 +7,8 @@ using Xamarin.Forms;
 
 namespace App1
 {
+    
+    
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -18,11 +20,20 @@ namespace App1
         {
             await Navigation.PushAsync(new LoginPage());
         }
-
-
+        
         private async void NavigateButton_OnCLicked2(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SettingPage());
+        }
+
+        private async void NavigateButton_OnClicked3(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ocrmodulescreen());
+        }
+        
+        private async void NavigateButton_OnClicked4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new scanresultaatpagina());
         }
     }
 }
