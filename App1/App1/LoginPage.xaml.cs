@@ -19,7 +19,12 @@ namespace App1
         
         private async void NavigateButton_OnCLicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new LoggedInPage());
+        }
+
+        private async void NavigateButton_ForgotPasswordPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ForgotPasswordPage());
         }
     }
 }
