@@ -20,10 +20,4 @@
         <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="HamburgerMenuViewModel.cs">
-        <DependentUpon>SettingPage.xaml</DependentUpon>
-      </Compile>
-    </ItemGroup>
 </Project>

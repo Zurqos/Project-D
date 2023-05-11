@@ -14,7 +14,6 @@ namespace App1
     {
         public HamburgerMenu()
         {
-            BindingContext = new HamburgerMenuViewModel();
             //IconImageSource = "yourHamburgerIcon.png"; TODO: Als we IOS gaan implenteren dubbel checken
             InitializeComponent();
         }
