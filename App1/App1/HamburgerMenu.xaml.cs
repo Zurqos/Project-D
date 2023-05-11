@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingPage : ContentPage
+    public partial class HamburgerMenu : ContentPage
     {
-        public SettingPage()
+        public HamburgerMenu()
         {
-            BindingContext = new SettingPageViewModel();
+            BindingContext = new HamburgerMenuViewModel();
             this.Icon = "yourHamburgerIcon.png";
             InitializeComponent();
         }

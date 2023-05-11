@@ -3,13 +3,13 @@ using App1;
 using Xamarin.Forms;
 
 
-public class SettingPageViewModel
+public class HamburgerMenuViewModel
 {
     public ICommand GoHomeCommand { get; set; }
     public ICommand GoSecondCommand { get; set; }
     public ICommand GoThirdCommand { get; set; }
 
-    public SettingPageViewModel()
+    public HamburgerMenuViewModel()
     {
         GoHomeCommand = new Command(GoHome);
         GoSecondCommand = new Command(GoSecond);

@@ -23,7 +23,7 @@ namespace App1
         
         private async void NavigateButton_OnCLicked2(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingPage());
+            await Navigation.PushAsync(new HamburgerMenu());
         }
 
         private async void NavigateButton_OnClicked3(object sender, EventArgs e)
