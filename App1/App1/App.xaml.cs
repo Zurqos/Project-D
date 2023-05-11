@@ -31,10 +31,10 @@ namespace App1
         }
         private void CallMain()
         {
-            var SettingPage = new SettingPage();
+            var hamburgerMenu = new HamburgerMenu();
             NavigationPage = new NavigationPage(new Home());
             RootPage = new RootPage();
-            RootPage.Master = SettingPage;
+            RootPage.Master = hamburgerMenu;
             RootPage.Detail = NavigationPage;
             MainPage = RootPage;
         }
