@@ -17,12 +17,12 @@ public class HamburgerMenuViewModel
     }
     void GoHome()
     {
-        //Application.NavigationPage.Navigation.PopToRootAsync();
-        //App.MenuisPresented = false;
+        App.NavigationPage.Navigation.PopToRootAsync();
+        App.MenuIsPresented = false;
     }
     void GoSecond(object obj)
     {
-        App.NavigationPage.Navigation.PushAsync(new Home()); //the content page you wanna load on this click event 
+        App.NavigationPage.Navigation.PushAsync(new Home());  
         App.MenuIsPresented = false;
     }
 
