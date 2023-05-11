@@ -29,15 +29,7 @@ namespace App1
         {
             // Handle when your app resumes
         }
-        private void CallMain()
-        {
-            var hamburgerMenu = new HamburgerMenu();
-            NavigationPage = new NavigationPage(new Home());
-            RootPage = new RootPage();
-            RootPage.Master = hamburgerMenu;
-            RootPage.Detail = NavigationPage;
-            MainPage = RootPage;
-        }
+       
         public static NavigationPage NavigationPage { get; private set; }
         public static RootPage RootPage;
 
