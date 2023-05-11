@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="SettingPageViewModel.cs">
+      <Compile Update="HamburgerMenuViewModel.cs">
         <DependentUpon>SettingPage.xaml</DependentUpon>
       </Compile>
     </ItemGroup>
