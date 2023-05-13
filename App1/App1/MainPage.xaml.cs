@@ -35,5 +35,9 @@ namespace App1
         {
             await Navigation.PushAsync(new scanresultaatpagina());
         }
+        private async void NavigateButton_OnClicked5(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DatabasePage());
+        }
     }
 }
