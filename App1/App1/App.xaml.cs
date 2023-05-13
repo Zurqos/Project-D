@@ -21,7 +21,7 @@ namespace App1
                              (Path.Combine
                                  (Environment.GetFolderPath
                                      (Environment.SpecialFolder.LocalApplicationData)
-                                     , "people.db3"));
+                                     , "testdb.db3"));
                 }
                 return database;
             }
