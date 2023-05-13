@@ -7,6 +7,6 @@ namespace App1
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool Subscribed { get; set; }
+        public bool IsAdmin { get; set; }
     }
 }

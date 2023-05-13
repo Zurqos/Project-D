@@ -6,7 +6,7 @@
     <StackLayout Margin="20,35,20,20">
         <Entry x:Name="nameEntry"
                Placeholder="Enter name" />
-        <CheckBox x:Name="subscribed"/>
+        <CheckBox x:Name="isAdmin"/>
         <Label Text="Is Admin" />
         <Button Text="Add to Database"
                 Clicked="OnButtonClicked" />
@@ -16,7 +16,7 @@
                     <StackLayout>
                         <Label Text="{Binding Name}"
                             FontSize="Medium"/>
-                        <Label Text="{Binding Subscribed}" 
+                        <Label Text="{Binding IsAdmin}" 
                                TextColor="Red"
                                  FontSize="Small"/>
                     </StackLayout>

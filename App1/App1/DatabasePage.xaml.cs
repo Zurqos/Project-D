@@ -30,11 +30,11 @@ namespace App1
                 await App.Database.SavePersonAsync(new Person
                 {
                     Name = nameEntry.Text,
-                    Subscribed = subscribed.IsChecked
+                    IsAdmin = isAdmin.IsChecked
                 });
 
                 nameEntry.Text = string.Empty;
-                subscribed.IsChecked = false;
+                isAdmin.IsChecked = false;
 
                 collectionView.ItemsSource = await App.Database.GetPeopleAsync();
             }
