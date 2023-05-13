@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 
 namespace App1
 {
-    public partial class App : Application
+    public partial class App 
     {
         public App()
         {
@@ -17,7 +17,6 @@ namespace App1
 
         protected override void OnStart()
         {
-
         }
 
         protected override void OnSleep()
@@ -29,32 +28,6 @@ namespace App1
         {
             // Handle when your app resumes
         }
-        private void CallMain()
-        {
-            var hamburgerMenu = new HamburgerMenu();
-            NavigationPage = new NavigationPage(new Home());
-            RootPage = new RootPage();
-            RootPage.Master = hamburgerMenu;
-            RootPage.Detail = NavigationPage;
-            MainPage = RootPage;
-        }
-        public static NavigationPage NavigationPage { get; private set; }
-        public static RootPage RootPage;
-
-        public static bool MenuIsPresented
-         {
-             get
-             {
-                 return RootPage.IsPresented;
-             }
-             set
-             {
-                 RootPage.IsPresented = value;
-             }
-         }
     }
-
-    internal class Home : Page
-    {
-    }
+    
 }
