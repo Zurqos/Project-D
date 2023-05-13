@@ -6,17 +6,30 @@
     <StackLayout Margin="20,35,20,20">
         <Entry x:Name="nameEntry"
                Placeholder="Enter name" />
-        <CheckBox x:Name="subscribed"/>
+        <CheckBox x:Name="isAdmin"/>
         <Label Text="Is Admin" />
         <Button Text="Add to Database"
                 Clicked="OnButtonClicked" />
-        <CollectionView x:Name="collectionView">
+        <Button Text="Delete from Database"
+                Clicked="OnDeleteClicked" />
+        <Button Text="Update Database"
+                Clicked="OnUpdateClicked" />
+        <Button Text="Show Only the admins"
+                Clicked="OnShowAdminsClicked" />
+        <Button Text="Show non admins"
+                Clicked="OnShowNonAdminsClicked" />
+        <Button Text="Show All"
+                Clicked="OnShowAllClicked" />
+        
+            
+        <CollectionView x:Name="collectionView" SelectionMode="Single" 
+                        SelectionChanged="collectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
                         <Label Text="{Binding Name}"
                             FontSize="Medium"/>
-                        <Label Text="{Binding Subscribed}" 
+                        <Label Text="{Binding IsAdmin}" 
                                TextColor="Red"
                                  FontSize="Small"/>
                     </StackLayout>
