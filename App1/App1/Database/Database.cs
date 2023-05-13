@@ -9,7 +9,7 @@ namespace App1
         public Database(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<Person>().Wait();
+            _database.CreateTableAsync<Person>();
         }
         public Task<List<Person>> GetPeopleAsync()
         {
@@ -19,5 +19,6 @@ namespace App1
         {
             return _database.InsertAsync(person);
         }
+        
     }
 }
