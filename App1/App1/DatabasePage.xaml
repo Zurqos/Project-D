@@ -10,7 +10,20 @@
         <Label Text="Is Admin" />
         <Button Text="Add to Database"
                 Clicked="OnButtonClicked" />
-        <CollectionView x:Name="collectionView">
+        <Button Text="Delete from Database"
+                Clicked="OnDeleteClicked" />
+        <Button Text="Update Database"
+                Clicked="OnUpdateClicked" />
+        <Button Text="Show Only the admins"
+                Clicked="OnShowAdminsClicked" />
+        <Button Text="Show non admins"
+                Clicked="OnShowNonAdminsClicked" />
+        <Button Text="Show All"
+                Clicked="OnShowAllClicked" />
+        
+            
+        <CollectionView x:Name="collectionView" SelectionMode="Single" 
+                        SelectionChanged="collectionView_SelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
