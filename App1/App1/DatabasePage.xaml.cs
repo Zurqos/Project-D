@@ -16,13 +16,13 @@ namespace App1
         {
             InitializeComponent();
         }
-
+        Person Admin = new Person(1, "Admin", true, "1234");
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            await App.Database.SavePersonAsync(Admin);
             collectionView.ItemsSource = await App.Database.GetPeopleAsync();
         }
-
         async void OnButtonClicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(nameEntry.Text))
@@ -67,6 +67,7 @@ namespace App1
                 LastSelection.IsAdmin = isAdmin.IsChecked;
                 await App.Database.UpdatePersonAsync(LastSelection);
                 collectionView.ItemsSource = await App.Database.GetPeopleAsync();
+                
             }
         }
 
@@ -84,5 +85,6 @@ namespace App1
         {
             collectionView.ItemsSource = await App.Database.LinqShowAllAsync();
         }
+        
     }
 }
