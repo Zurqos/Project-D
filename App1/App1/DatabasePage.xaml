@@ -2,10 +2,13 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app1="clr-namespace:App1;assembly=App1"
              x:Class="App1.DatabasePage">
     <StackLayout Margin="20,35,20,20">
         <Entry x:Name="nameEntry"
                Placeholder="Enter name" />
+        <Entry x:Name="PasswordEntry"
+               Placeholder="Enter password" />
         <CheckBox x:Name="isAdmin"/>
         <Label Text="Is Admin" />
         <Button Text="Add to Database"
@@ -28,7 +31,7 @@
                 <DataTemplate>
                     <StackLayout>
                         <Label Text="{Binding Name}"
-                            FontSize="Medium"/>
+                               FontSize="Medium"/>
                         <Label Text="{Binding IsAdmin}" 
                                TextColor="Red"
                                  FontSize="Small"/>
