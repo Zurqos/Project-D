@@ -28,6 +28,7 @@ namespace App1
                 await App.Database.SavePersonAsync(new Person
                 {
                     Name = nameEntry.Text,
+                    Password = PasswordEntry.Text,
                     IsAdmin = isAdmin.IsChecked
                 });
                 nameEntry.Text = string.Empty;
