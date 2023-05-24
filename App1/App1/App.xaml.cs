@@ -29,12 +29,23 @@ namespace App1
         public App()
         {
             InitializeComponent();
-
+            // if login succesfol naviagte to main page else to login page
             MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
+            LoginPage test = new LoginPage();
+            if (test.isPressed )
+            {
+                MainPage = new NavigationPage(new MainPage());
+                Console.WriteLine("Login succesful");
+            }
+            else
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+
         }
 
         protected override void OnSleep()
@@ -46,6 +57,8 @@ namespace App1
         {
             // Handle when your app resumes
         }
+
+        
     }
     
 }
