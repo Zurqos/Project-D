@@ -1,18 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using Microsoft.Azure.CognitiveServices.Vision.ComputerVision;
 using Microsoft.Azure.CognitiveServices.Vision.ComputerVision.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using FileResult = Xamarin.Essentials.FileResult;
 
 namespace App1
 {
     public partial class ocrmodulescreen : ContentPage
     {
+        private string finalresult;
         private string _analysisResult;
         private ComputerVisionClient _computerVisionClient;
+        public static List<string> resultsofocr = new List<string>();
 
         public string AnalysisResult
         {
@@ -32,6 +37,10 @@ namespace App1
             InitializeComponent();
             BindingContext = this;
             _computerVisionClient = Authenticate(endpoint, key);
+        }
+        private async void ToScanHistory(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ToScanHistory());
         }
 
         public async void TakePhotoButton_Clicked(object sender, EventArgs e)
@@ -64,46 +73,26 @@ namespace App1
                 image.Source = ImageSource.FromStream(() => stream);
 
                 string result = await ReadFile(_computerVisionClient, photo);
-
-                // Categorize the result
-                string category = CategorizeResultTotal(result);
-
+                
                 // Display the extracted text and category
-                await DisplayAlert("Scan Result", $"Totaal: {category}\nResult: {result}", "Exit");
+                await DisplayAlert("Scan Result", $"Image has sucessfully been scanned!", "Exit");
+                finalresult = $"Result:\n " + result;
+                resultsofocr.Add(finalresult);
+                ViewResultButton.IsVisible = true;
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
             }
         }
-        private string CategorizeResultTotal(string result)
-        {
-            string[] lines = result.Split('\n');
-            string lineAfterLastTotaal = null;
-
-            for (int i = lines.Length - 1; i >= 0; i--)
-            {
-                if (lines[i].ToLower().Contains("totaal"))
-                {
-                    if (i < lines.Length - 1)
-                    {
-                        lineAfterLastTotaal = lines[i + 1];
-                        break;
-                    }
-                }
-            }
-
-            if (!string.IsNullOrEmpty(lineAfterLastTotaal))
-            {
-                return lineAfterLastTotaal;
-            }
-
-            return "Line after last 'totaal' not found";
-        }
-
-
-
         
+        private async void ViewResultButton_Clicked(object sender, EventArgs e)
+        {
+            
+
+
+                await DisplayAlert("Scan Result", $"{finalresult}", "OK");
+        }
 
 
 

@@ -57,6 +57,10 @@ namespace App1
             }
         }
         
+        private async void NavigateButton_OnClicked4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
 
         async void OnUpdateClicked(object sender, EventArgs e)
         {

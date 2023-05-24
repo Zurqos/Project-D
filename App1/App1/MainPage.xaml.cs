@@ -20,6 +20,11 @@ namespace App1
         {
             await Navigation.PushAsync(new LoginPage());
         }
+        
+        private async void NavigateButton_OnCLicked7(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ToScanHistory());
+        }
 
         private async void NavigateButton_OnClicked3(object sender, EventArgs e)
         {
