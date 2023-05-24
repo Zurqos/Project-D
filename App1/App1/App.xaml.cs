@@ -29,22 +29,21 @@ namespace App1
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new LoginPage());
+            
         }
 
         protected override void OnStart()
         {
-            LoginPage test = new LoginPage();
-            if (test.isPressed )
+            LoginPage Checkup = new LoginPage();
+            if (Checkup.isPressed)
             {
                 MainPage = new NavigationPage(new MainPage());
-                Console.WriteLine("Login succesful");
             }
             else
             {
                 MainPage = new NavigationPage(new LoginPage());
             }
-
         }
 
         protected override void OnSleep()
@@ -56,8 +55,6 @@ namespace App1
         {
             // Handle when your app resumes
         }
-        
-        
     }
     
 }

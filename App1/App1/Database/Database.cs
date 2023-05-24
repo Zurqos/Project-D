@@ -9,12 +9,11 @@ namespace App1
         public Database(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
-            if (_database.Table<Person>().CountAsync().Result == 0 || _database.Table<Person>()
-                .FirstAsync(_ => _.Name == "Admin").Result == null)
+            _database.CreateTableAsync<Person>();
+            if (_database.Table<Person>().CountAsync().Result == 0)
             {
                 _database.InsertAsync(new Person(1, "Admin", true, "1234"));
             }
-            _database.CreateTableAsync<Person>();
         }
         public Task<List<Person>> GetPeopleAsync()
         {
@@ -24,6 +23,7 @@ namespace App1
         {
             return _database.InsertAsync(person);
         }
+        
         public Task<int> UpdatePersonAsync(Person person)
         {
             return _database.UpdateAsync(person);

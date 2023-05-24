@@ -4,6 +4,7 @@ namespace App1
 {
     public class Person
     {
+        
         public Person(int id, string name, bool isAdmin, string Password)
         {
             Id = id;
@@ -15,7 +16,6 @@ namespace App1
         public Person()
         {
         }
-
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
