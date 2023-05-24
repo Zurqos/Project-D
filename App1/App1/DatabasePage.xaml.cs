@@ -32,6 +32,7 @@ namespace App1
                     IsAdmin = isAdmin.IsChecked
                 });
                 nameEntry.Text = string.Empty;
+                PasswordEntry.Text = string.Empty;
                 isAdmin.IsChecked = false;
                 collectionView.ItemsSource = await App.Database.GetPeopleAsync();
             }
@@ -51,6 +52,7 @@ namespace App1
                 await App.Database.DeletePersonAsync(LastSelection);
                 collectionView.ItemsSource = await App.Database.GetPeopleAsync();
                 nameEntry.Text = string.Empty;
+                PasswordEntry.Text = string.Empty;
                 isAdmin.IsChecked = false;
             }
         }
@@ -62,6 +64,7 @@ namespace App1
             {
                 LastSelection.Name = nameEntry.Text;
                 LastSelection.IsAdmin = isAdmin.IsChecked;
+                LastSelection.Password = PasswordEntry.Text;
                 await App.Database.UpdatePersonAsync(LastSelection);
                 collectionView.ItemsSource = await App.Database.GetPeopleAsync();
                 
