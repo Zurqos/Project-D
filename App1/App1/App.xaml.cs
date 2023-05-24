@@ -29,7 +29,6 @@ namespace App1
         public App()
         {
             InitializeComponent();
-            // if login succesfol naviagte to main page else to login page
             MainPage = new NavigationPage(new MainPage());
         }
 
@@ -57,7 +56,7 @@ namespace App1
         {
             // Handle when your app resumes
         }
-
+        
         
     }
     
