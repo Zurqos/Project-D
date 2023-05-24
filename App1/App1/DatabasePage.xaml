@@ -25,7 +25,7 @@
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
-            <Frame BorderColor="#FFE500" BackgroundColor="#FFE500" CornerRadius="7" Padding="0" HeightRequest="700" WidthRequest="350" Margin="20">
+            <Frame BorderColor="#FFE500" BackgroundColor="#FFE500" CornerRadius="7" Padding="0" HeightRequest="850" WidthRequest="350" Margin="20">
                 <Frame BorderColor="#FFE500" BackgroundColor="#2C2E3B" CornerRadius="7" Padding="0">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -68,17 +68,17 @@
                                        Placeholder="Enter password" />
                                 <CheckBox x:Name="isAdmin"/>
                                 <Label Text="Is Admin" />
-                                <Button Text="Add to Database" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Add to Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnButtonClicked" />
-                                <Button Text="Delete from Database" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Delete from Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnDeleteClicked" />
-                                <Button Text="Update Database" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Update Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnUpdateClicked" />
-                                <Button Text="Show Only the admins" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Show Only the admins" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnShowAdminsClicked" />
-                                <Button Text="Show non admins" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Show non admins" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnShowNonAdminsClicked" />
-                                <Button Text="Show All" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Show All" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnShowAllClicked" />
         
             
@@ -91,15 +91,13 @@
                                                        FontSize="Medium"/>
                                                 <Label Text="{Binding IsAdmin}" 
                                                        TextColor="Red"
+                                                       HeightRequest="10"
                                                        FontSize="Small"/>
                                             </StackLayout>
                                         </DataTemplate>
                                     </CollectionView.ItemTemplate>
                                 </CollectionView>
                             </StackLayout>
-                            
-                            <Grid WidthRequest="200" HeightRequest="200">
-                            </Grid>
                             
                             
 
