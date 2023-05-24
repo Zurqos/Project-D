@@ -57,13 +57,13 @@
                         <StackLayout Grid.Row="1" Grid.Column="1" Padding="5,10,0,0" VerticalOptions="CenterAndExpand" Margin="0,-30,0,10">
                             <StackLayout>
                                 <Label Text="User Name" TextColor="#FFE500"></Label>
-                                <Entry Text="" Placeholder="User Name" x:Name="userNameInput"></Entry>
+                                <Entry Text="" Placeholder="User Name" x:Name="UserNameInput"></Entry>
                                 <Label Text="Password" TextColor="#FFE500"></Label>
-                                <Entry Text="" Placeholder="Password" IsPassword="True"></Entry>
+                                <Entry Text="" Placeholder="Password" x:Name="correctPassword" IsPassword="True"></Entry>
                             </StackLayout>
 
                             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                                <Button Text="Login" Style="{StaticResource ButtonStyle}" Margin="0,5,0,10" HeightRequest="40" Clicked="NavigateButton_OnCLicked"/>
+                                <Button Text="Login" Style="{StaticResource ButtonStyle}" Margin="0,5,0,10" HeightRequest="40" Clicked="NavigateButton_OnCLickedLogin"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Vertical" HorizontalOptions="Center">
@@ -72,13 +72,7 @@
                         </StackLayout>
 
 
-                        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Start" Margin="-380,300,-23,0">
-                            <Button Text="←" Style="{StaticResource ButtonStyle}" WidthRequest="50" HeightRequest="40" FontSize="12" Clicked="NavigateButton_OnClicked4" />
-                           
-                           
-                            
-
-                        </StackLayout>
+                        
                     </Grid>
                 </Frame>
             </Frame>
