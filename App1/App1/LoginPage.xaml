@@ -2,20 +2,86 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.LoginPage">
+             x:Class="App1.LoginPage"
+             BackgroundColor="#2C2E3B">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="BackgroundColor" Value="#2C2E3B" />
+                <Setter Property="TextColor" Value="#FFE500" />
+                <Setter Property="BorderColor" Value="#FFE500" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="CornerRadius" Value="7" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout x:Name="MainStak">
-            <Button Text="Back to Main Page" BackgroundColor="Blue" Clicked="NavigateButton_OnCLicked"></Button>
-            <StackLayout Padding="20" Margin="0,80,0,0">
-                <Label Text="User Name" TextColor="Black"></Label>
-                <Entry Text="" Placeholder="User Name" x:Name = "usereNameInput"></Entry>
-                <Label Text="Password" TextColor="Black"></Label>
-                <Entry Text="" Placeholder="Password" IsPassword="True"></Entry>
-                <Button Text="Login"
-                        Clicked="NavigateButton_OnCLicked"/>
-                <Button Text="Forgot Password"
-                        Clicked="NavigateButton_ForgotPasswordPage"/>
-            </StackLayout>
+        
+
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Frame BorderColor="#FFE500" BackgroundColor="#FFE500" CornerRadius="7" Padding="0" HeightRequest="550" WidthRequest="350" Margin="20">
+                <Frame BorderColor="#FFE500" BackgroundColor="#2C2E3B" CornerRadius="7" Padding="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Horizontal line -->
+                        <!-- left, up -->
+                        <Label Text="Login" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               Grid.Row="0" 
+                               Grid.Column="1" 
+                               TextColor="#FFE500"
+                               FontAttributes="Bold"
+                               FontSize="24" />
+                        <Image Source="C:\Users\Ray\source\repos\Zurqos\Project-D\App1\App1.Droid\img\temporary.png" />
+
+                        <BoxView BackgroundColor="#FFE500" HeightRequest="1" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" Margin="-80,70,-30,0" />
+                        <!-- Vertical line -->
+
+                        <BoxView BackgroundColor="#FFE500" WidthRequest="1" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0" Margin="60,-7,0,0" />
+                        <!-- Buttons -->
+
+                        <StackLayout Grid.Row="1" Grid.Column="1" Padding="5,10,0,0" VerticalOptions="CenterAndExpand" Margin="0,-30,0,10">
+                            <StackLayout>
+                                <Label Text="User Name" TextColor="#FFE500"></Label>
+                                <Entry Text="" Placeholder="User Name" x:Name="userNameInput"></Entry>
+                                <Label Text="Password" TextColor="#FFE500"></Label>
+                                <Entry Text="" Placeholder="Password" IsPassword="True"></Entry>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Button Text="Login" Style="{StaticResource ButtonStyle}" Margin="0,5,0,10" HeightRequest="40" Clicked="NavigateButton_OnCLicked"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                                <Button Text="Wachtwoord vergeten"  Style="{StaticResource ButtonStyle}" Margin="0,0,0,100" HeightRequest="65" Clicked="NavigateButton_ForgotPasswordPage"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Start" Margin="-380,300,-23,0">
+                            <Button Text="←" Style="{StaticResource ButtonStyle}" WidthRequest="50" HeightRequest="40" FontSize="12" Clicked="NavigateButton_OnClicked4" />
+                           
+                           
+                            
+
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

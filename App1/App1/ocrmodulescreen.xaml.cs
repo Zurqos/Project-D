@@ -23,7 +23,10 @@ namespace App1
                 OnPropertyChanged(nameof(AnalysisResult));
             }
         }
-
+        private async void NavigateButton_OnClicked4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
         public ocrmodulescreen()
         {
             InitializeComponent();
@@ -61,16 +64,47 @@ namespace App1
                 image.Source = ImageSource.FromStream(() => stream);
 
                 string result = await ReadFile(_computerVisionClient, photo);
-                AnalysisResult = result;
 
-                // Display the extracted text
-                await DisplayAlert("Scan Result", result, "Exit");
+                // Categorize the result
+                string category = CategorizeResultTotal(result);
+
+                // Display the extracted text and category
+                await DisplayAlert("Scan Result", $"Totaal: {category}\nResult: {result}", "Exit");
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
             }
         }
+        private string CategorizeResultTotal(string result)
+        {
+            string[] lines = result.Split('\n');
+            string lineAfterLastTotaal = null;
+
+            for (int i = lines.Length - 1; i >= 0; i--)
+            {
+                if (lines[i].ToLower().Contains("totaal"))
+                {
+                    if (i < lines.Length - 1)
+                    {
+                        lineAfterLastTotaal = lines[i + 1];
+                        break;
+                    }
+                }
+            }
+
+            if (!string.IsNullOrEmpty(lineAfterLastTotaal))
+            {
+                return lineAfterLastTotaal;
+            }
+
+            return "Line after last 'totaal' not found";
+        }
+
+
+
+        
+
 
 
         static string key = "6f295b68e89441c5bf642e5e176b7662";
