@@ -16,11 +16,9 @@ namespace App1
         {
             InitializeComponent();
         }
-        Person Admin = new Person(1, "Admin", true, "1234");
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            await App.Database.SavePersonAsync(Admin);
             collectionView.ItemsSource = await App.Database.GetPeopleAsync();
         }
         async void OnButtonClicked(object sender, EventArgs e)
@@ -32,10 +30,8 @@ namespace App1
                     Name = nameEntry.Text,
                     IsAdmin = isAdmin.IsChecked
                 });
-
                 nameEntry.Text = string.Empty;
                 isAdmin.IsChecked = false;
-
                 collectionView.ItemsSource = await App.Database.GetPeopleAsync();
             }
         }
