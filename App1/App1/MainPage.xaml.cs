@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Antlr.Runtime;
 using Xamarin.Forms;
 
 namespace App1
@@ -15,15 +16,9 @@ namespace App1
         {
             InitializeComponent();
         }
-
-        private async void NavigateButton_OnCLicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
-        }
-        
         private async void NavigateButton_OnCLicked2(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new HamburgerMenu());
+            await Navigation.PushAsync(new LoginPage());
         }
 
         private async void NavigateButton_OnClicked3(object sender, EventArgs e)
