@@ -67,7 +67,7 @@
                             </Grid>
                             
                             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                                <Button Text="Scan Opslaan" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" HeightRequest="40"  Clicked="ToScanHistory"/>
+                                <Button Text="Save scan" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" HeightRequest="40"  Clicked="ToScanHistory"/>
                                 
                             </StackLayout>
                             
@@ -76,7 +76,7 @@
                                 <Label Text="{Binding AnalysisResult}" />
                                 
                             </StackLayout>
-                            <Button Text="Scan uw afbeelding" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Clicked="TakePhotoButton_Clicked" HeightRequest="40"/>
+                            <Button Text="Scan your image" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Clicked="TakePhotoButton_Clicked" HeightRequest="40"/>
 
                             </StackLayout>
                             

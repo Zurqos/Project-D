@@ -55,6 +55,7 @@
                         <!-- Buttons -->
                         <StackLayout Grid.Row="1" Grid.Column="1" Padding="5,0,0,0" VerticalOptions="CenterAndExpand">
                             <Label Text="Here are your list of scans:"
+                                   TextColor="#FFE500"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="CenterAndExpand" />
                             <StackLayout>
