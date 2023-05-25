@@ -12,7 +12,8 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-        public bool isPressed;
+        public bool isPressedAdmin;
+        public bool isPressedUser;
         public Task<List<Person>> listOfAllUsers = App.Database.LinqShowAllAsync();
         public LoginPage()
         {
@@ -23,16 +24,22 @@ namespace App1
 
         private async void NavigateButton_OnCLickedLogin(object sender, EventArgs e)
         { 
-            isPressed = false;
+            isPressedAdmin = false;
+            isPressedUser = false;
             var username = UserNameInput.Text;
             var password = correctPassword.Text;
             if (listOfAllUsers.Result != null)
             {
                 foreach (Person user in listOfAllUsers.Result)
                 {
-                    if (user.Name == username && user.Password == password)
+                    if (user.Name == username && user.Password == password && user.IsAdmin)
                     {
-                        isPressed = true;
+                        isPressedAdmin = true;
+                        break;
+                    } 
+                    if (user.Name == username && user.Password == password && user.IsAdmin == false)
+                    {
+                        isPressedUser = true;
                         break;
                     }
                 }
@@ -41,11 +48,15 @@ namespace App1
             {
                 await App.Database.SavePersonAsync(new Person(1, "Admin", true, "1234"));
             }
-            if (isPressed)
+            if (isPressedAdmin)
             {
                 await Navigation.PushAsync(new MainPage());
+            } 
+            if (isPressedUser)
+            {
+                await Navigation.PushAsync(new MainPageNoAdmin());
             }
-            else
+            if (!isPressedAdmin && !isPressedUser)
             {
                 await DisplayAlert("Login Failed", "Username or Password is incorrect", "OK");
             }
