@@ -62,12 +62,13 @@
                                 <Entry Text="" Placeholder="Bedrag" IsEnabled="True" FontSize="15" TextColor="#FFE500"/>
                                 <Entry Text="" Placeholder="BTW" IsEnabled="True" FontSize="15" TextColor="#FFE500"/> -->
                             <StackLayout Margin="20,60,20,20">
-                                <Entry x:Name="nameEntry" TextColor="White"
-                                       Placeholder="Enter name" />
-                                <Entry x:Name="PasswordEntry" TextColor="White"
-                                       Placeholder="Enter password" />
-                                <CheckBox x:Name="isAdmin"/>
-                                <Label Text="Is Admin" />
+                                <Entry x:Name="nameEntry"
+                                       Placeholder="Enter name" PlaceholderColor="White" />
+                                <Entry x:Name="PasswordEntry" 
+                                       Placeholder="Enter password" 
+                                       PlaceholderColor="White"/>
+                                <CheckBox x:Name="isAdmin" Color="White"/>
+                                <Label Text="Is Admin" TextColor="White" />
                                 <Button Text="Show All Buttons" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnButtonClickedshowButtons" />
                                 <StackLayout x:Name="Buttons" IsVisible="False">
