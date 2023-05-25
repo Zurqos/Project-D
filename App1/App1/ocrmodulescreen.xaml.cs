@@ -72,17 +72,19 @@ namespace App1
 
                 image.Source = ImageSource.FromStream(() => stream);
 
+                await DisplayAlert("Wait", $"Please wait while your image is being scanned", "Exit");
+
                 string result = await ReadFile(_computerVisionClient, photo);
                 
                 // Display the extracted text and category
-                await DisplayAlert("Scan Result", $"Image has sucessfully been scanned!", "Exit");
+                await DisplayAlert("Scan Result", $"Image has sucessfully been scanned!\nPress 'View result' to see the result. Press 'Scan Image to scan your image again.\nPress 'Save scan' to save your scan'", "Exit");
                 finalresult = $"Result:\n " + result;
                 resultsofocr.Add(finalresult);
                 ViewResultButton.IsVisible = true;
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
+                await DisplayAlert("Error", $"An error occurred: {ex.Message}\n Most likely, photo wasn't a receit or an unreadable receit, please try rescanning", "OK");
             }
         }
         

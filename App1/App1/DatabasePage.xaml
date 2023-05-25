@@ -68,24 +68,19 @@
                                        Placeholder="Enter password" />
                                 <CheckBox x:Name="isAdmin"/>
                                 <Label Text="Is Admin" />
-                                <!-- make button to show all button -->
-                                <Button Text="Show all buttons" HeightRequest="40" Style="{StaticResource ButtonStyle}"
-                                        Clicked="OnButtonClickedshowButtons" />
-                                <StackLayout x:Name="Buttons" IsVisible = "False">
-                                    <Button Text="Add to Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
-                                            Clicked="OnButtonClicked" />
-                                    <Button Text="Delete from Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
-                                            Clicked="OnDeleteClicked" />
-                                    <Button Text="Update Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
-                                            Clicked="OnUpdateClicked" />
-                                    <Button Text="Show Only the admins" HeightRequest="40" Style="{StaticResource ButtonStyle}"
-                                            Clicked="OnShowAdminsClicked" />
-                                    <Button Text="Show non admins" HeightRequest="40" Style="{StaticResource ButtonStyle}"
-                                            Clicked="OnShowNonAdminsClicked" />
-                                    <Button Text="Show All" HeightRequest="40" Style="{StaticResource ButtonStyle}"
-                                            Clicked="OnShowAllClicked" />
-                                </StackLayout>
-                                    
+                                <Button Text="Add to Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnButtonClicked" />
+                                <Button Text="Delete from Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnDeleteClicked" />
+                                <Button Text="Update Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnUpdateClicked" />
+                                <Button Text="Show Only the admins" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnShowAdminsClicked" />
+                                <Button Text="Show non admins" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnShowNonAdminsClicked" />
+                                <Button Text="Show All" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnShowAllClicked" />
+        
             
                                 <CollectionView x:Name="collectionView" SelectionMode="Single" 
                                                 SelectionChanged="collectionView_SelectionChanged">
