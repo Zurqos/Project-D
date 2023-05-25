@@ -22,4 +22,15 @@
         <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="MainPageNoAdmin.xaml.cs">
+        <DependentUpon>MainPageNoAdmin.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="MainPageNoAdmin.xaml.cs">
+        <DependentUpon>MainPageNoAdmin.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>
