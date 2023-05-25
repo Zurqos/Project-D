@@ -63,11 +63,15 @@
                                 <Entry Text="" Placeholder="BTW" IsEnabled="True" FontSize="15" TextColor="#FFE500"/> -->
                             <StackLayout Margin="20,60,20,20">
                                 <Entry x:Name="nameEntry"
-                                       Placeholder="Enter name" />
+                                       Placeholder="Enter name"
+                                       TextColor="#FFE500" PlaceholderColor="#FFFFFFFF"
+                                       />
                                 <Entry x:Name="PasswordEntry"
-                                       Placeholder="Enter password" />
+                                       Placeholder="Enter password" 
+                                       TextColor="#FFE500" PlaceholderColor="#FFFFFFFF"
+                                       />
                                 <CheckBox x:Name="isAdmin"/>
-                                <Label Text="Is Admin" />
+                                <Label Text="Is Admin" TextColor="#FFE500"/>
                                 <Button Text="Add to Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnButtonClicked" />
                                 <Button Text="Delete from Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
@@ -88,7 +92,9 @@
                                         <DataTemplate>
                                             <StackLayout>
                                                 <Label Text="{Binding Name}"
-                                                       FontSize="Medium"/>
+                                                       TextColor="#FFE500"
+                                                       FontSize="Medium 
+                                                       "/>
                                                 <Label Text="{Binding IsAdmin}" 
                                                        TextColor="Red"
                                                        HeightRequest="10"
