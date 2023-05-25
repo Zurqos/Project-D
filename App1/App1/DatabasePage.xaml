@@ -62,12 +62,15 @@
                                 <Entry Text="" Placeholder="Bedrag" IsEnabled="True" FontSize="15" TextColor="#FFE500"/>
                                 <Entry Text="" Placeholder="BTW" IsEnabled="True" FontSize="15" TextColor="#FFE500"/> -->
                             <StackLayout Margin="20,60,20,20">
-                                <Entry x:Name="nameEntry"
+                                <Entry x:Name="nameEntry" TextColor="White"
                                        Placeholder="Enter name" />
-                                <Entry x:Name="PasswordEntry"
+                                <Entry x:Name="PasswordEntry" TextColor="White"
                                        Placeholder="Enter password" />
                                 <CheckBox x:Name="isAdmin"/>
                                 <Label Text="Is Admin" />
+                                <Button Text="Show All Buttons" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnButtonClickedshowButtons" />
+                                <StackLayout x:Name="Buttons" IsVisible="False">
                                 <Button Text="Add to Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnButtonClicked" />
                                 <Button Text="Delete from Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
@@ -80,18 +83,16 @@
                                         Clicked="OnShowNonAdminsClicked" />
                                 <Button Text="Show All" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnShowAllClicked" />
-        
-            
+                                </StackLayout>
                                 <CollectionView x:Name="collectionView" SelectionMode="Single" 
                                                 SelectionChanged="collectionView_SelectionChanged">
                                     <CollectionView.ItemTemplate>
                                         <DataTemplate>
                                             <StackLayout>
-                                                <Label Text="{Binding Name}"
+                                                <Label Text="{Binding Name}" TextColor="White"
                                                        FontSize="Medium"/>
-                                                <Label Text="{Binding IsAdmin}" 
+                                                <Label Text="{Binding IsAdmin}"
                                                        TextColor="Red"
-                                                       HeightRequest="10"
                                                        FontSize="Small"/>
                                             </StackLayout>
                                         </DataTemplate>
