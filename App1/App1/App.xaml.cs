@@ -36,9 +36,13 @@ namespace App1
         protected override void OnStart()
         {
             LoginPage Checkup = new LoginPage();
-            if (Checkup.isPressed)
+            if (Checkup.isPressedAdmin)
             {
                 MainPage = new NavigationPage(new MainPage());
+            }
+            if (Checkup.isPressedUser)
+            {
+                MainPage = new NavigationPage(new MainPageNoAdmin());
             }
             else
             {

@@ -10,29 +10,26 @@ namespace App1
 {
     
     
-    public partial class MainPage : ContentPage
+    public partial class MainPageNoAdmin : ContentPage
     {
-        public MainPage()
+        public MainPageNoAdmin()
         {
             InitializeComponent();
         }
-        private async void NavigateButton_OnCLicked2(object sender, EventArgs e)
+        private async void NavigateButton_OnCLicked2NoAdmin(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LoginPage());
         }
         
-        private async void NavigateButton_OnClicked3(object sender, EventArgs e)
+        private async void NavigateButton_OnClicked3NoAdmin(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ocrmodulescreen());
         }
         
-        private async void NavigateButton_OnClicked4(object sender, EventArgs e)
+        private async void NavigateButton_OnClicked4NoAdmin(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new scanresultaatpagina());
         }
-        private async void NavigateButton_OnClicked5(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new DatabasePage());
-        }
+      
     }
 }
