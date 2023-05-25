@@ -89,6 +89,20 @@ namespace App1
         {
             collectionView.ItemsSource = await App.Database.LinqShowAllAsync();
         }
-        
+
+        private void OnButtonClickedshowButtons(object sender, EventArgs e)
+        {
+            var clicked = Buttons.IsVisible;
+            if (!clicked)
+            {
+                Buttons.IsVisible = true;
+            }
+            else
+            {
+                Buttons.IsVisible = false;
+            }
+          
+            
+        }
     }
 }
