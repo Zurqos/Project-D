@@ -39,7 +39,7 @@
 
                         <!-- Horizontal line -->
                         <!-- left, up -->
-                        <Label Text="Scan pagina" 
+                        <Label Text="Database" 
                                HorizontalOptions="Center" 
                                VerticalOptions="Center" 
                                Grid.Row="0" 

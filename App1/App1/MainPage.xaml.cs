@@ -28,7 +28,7 @@ namespace App1
         
         private async void NavigateButton_OnClicked4(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new scanresultaatpagina());
+            await Navigation.PushAsync(new ToScanHistory());
         }
         private async void NavigateButton_OnClicked5(object sender, EventArgs e)
         {
