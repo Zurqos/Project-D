@@ -5,6 +5,7 @@
              xmlns:local="clr-namespace:App1"
              x:Class="App1.MainPage"
              BackgroundColor="#2C2E3B">
+    
 
     <ContentPage.Resources>
         <ResourceDictionary>
