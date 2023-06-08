@@ -41,7 +41,7 @@
                         
                         <!-- Horizontal line -->
                         <!-- left, up -->
-                        <Label Text="Home page" 
+                        <Label Text="Home pagina" 
                                HorizontalOptions="Center" 
                                VerticalOptions="Center" 
                                Grid.Row="0" 
