@@ -23,7 +23,7 @@
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
-            <Frame BorderColor="#FFE500" BackgroundColor="#FFE500" CornerRadius="7" Padding="0" HeightRequest="550" WidthRequest="350" Margin="20">
+            <Frame BorderColor="#FFE500" BackgroundColor="#FFE500" CornerRadius="7" Padding="0" HeightRequest="850" WidthRequest="350" Margin="20">
                 <Frame BorderColor="#FFE500" BackgroundColor="#2C2E3B" CornerRadius="7" Padding="0">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -37,7 +37,7 @@
 
                         <!-- Horizontal line -->
                         <!-- left, up -->
-                        <Label Text="Scan pagina" 
+                        <Label Text="Database" 
                                HorizontalOptions="Center" 
                                VerticalOptions="Center" 
                                Grid.Row="0" 
@@ -45,8 +45,7 @@
                                TextColor="#FFE500"
                                FontAttributes="Bold"
                                FontSize="24" />
-                        <Image Source="C:\Users\Ray\source\repos\Zurqos\Project-D\App1\App1.Droid\img\temporary.png" />
-
+                        
                         <BoxView BackgroundColor="#FFE500" HeightRequest="1" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" Margin="-80,70,-30,0" />
                         <!-- Vertical line -->
 
@@ -55,28 +54,42 @@
 
                         <StackLayout Grid.Row="1" Grid.Column="1" Padding="5,10,0,0" VerticalOptions="CenterAndExpand" Margin="0,-75,0,10">
                             <StackLayout>
-                            <!--    <Entry Text="" Placeholder="Omschrijving" IsEnabled="True" FontSize="15" TextColor="#FFE500"/>
-                                <Entry Text="" Placeholder="Bedrijf" IsEnabled="True" FontSize="15" TextColor="#FFE500"/>
-                                <Entry Text="" Placeholder="Categorie" IsEnabled="True" FontSize="15" TextColor="#FFE500"/>
-                                <Entry Text="" Placeholder="Bedrag" IsEnabled="True" FontSize="15" TextColor="#FFE500"/>
-                                <Entry Text="" Placeholder="BTW" IsEnabled="True" FontSize="15" TextColor="#FFE500"/> -->
-                            
-                            <Grid WidthRequest="200" HeightRequest="200">
-                               <!-- <Image x:Name="image" IsVisible="{Binding IsImageVisible}" Source="your_image_source.jpg" /> -->
-                               <Image x:Name="image" IsVisible="False" />
-                            </Grid>
-                            
-                            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                                <Button Text="Save scan" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" HeightRequest="40"  Clicked="ToScanHistory"/>
+                                <StackLayout Margin="20,60,20,20">
+                                <Entry x:Name="Omschrijving"
+                                       TextColor="#FFE500"
+                                       Placeholder="Omschrijving" PlaceholderColor="White" />
+                                <Entry x:Name="Bedrijf" 
+                                       TextColor="#FFE500"
+                                       Placeholder="Bedrijf" 
+                                       PlaceholderColor="White"/>
                                 
-                            </StackLayout>
-                            
-                            <StackLayout>
-                                <Button x:Name="ViewResultButton" Text="View Result" Style="{StaticResource ButtonStyle}" Clicked="ViewResultButton_Clicked" IsVisible="False"/>
+
+                                <StackLayout x:Name="Buttons" IsVisible="True">
+                                    <Entry x:Name="Categorie" 
+                                           TextColor="#FFE500"
+                                           Placeholder="Categorie" 
+                                           PlaceholderColor="White"/>
+                                    <Entry x:Name="Bedrag" 
+                                           TextColor="#FFE500"
+                                           Placeholder="Bedrag" 
+                                           PlaceholderColor="White"/>
+                                    <Entry x:Name="BTW" 
+                                           TextColor="#FFE500"
+                                           Placeholder="BTW" 
+                                           PlaceholderColor="White"/>
+                                <Button x:Name="ViewResultButton" Text="View result" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="ViewResultButton_Clicked" IsVisible="False"/>
                                 <Label Text="{Binding AnalysisResult}" />
+                                <Button Text="Scan your image" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="TakePhotoButton_Clicked" />
+                                <Button Text="Save scan" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                        Clicked="ToScanHistory" />
                                 
-                            </StackLayout>
-                            <Button Text="Scan your image" Style="{StaticResource ButtonStyle}" Margin="0,0,0,0" Clicked="TakePhotoButton_Clicked" HeightRequest="40"/>
+                                <Image x:Name="image" IsVisible="False" />
+                                </StackLayout>
+                                </StackLayout>
+                            
+                            
 
                             </StackLayout>
                             
