@@ -37,7 +37,7 @@
 
                         <!-- Horizontal line -->
                         <!-- left, up -->
-                        <Label Text="Database" 
+                        <Label Text="OCR-Module" 
                                HorizontalOptions="Center" 
                                VerticalOptions="Center" 
                                Grid.Row="0" 
