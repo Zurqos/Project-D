@@ -26,7 +26,10 @@ namespace App1
 
             readthisone = ocrfunction;
         }
-
+        private async void NavigateButton_OnClicked4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
         private async void DisplayListClicked(object sender, EventArgs e)
         {
             DisplayOcrResults();

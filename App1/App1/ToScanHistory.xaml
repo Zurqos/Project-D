@@ -63,6 +63,10 @@
                                 <Label x:Name="listLabel" />
                             </StackLayout>
                         </StackLayout>
+                        
+                        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Start" Margin="-380,300,-23,0">
+                            <Button Text="←" Style="{StaticResource ButtonStyle}" WidthRequest="50" HeightRequest="40" FontSize="12" Clicked="NavigateButton_OnClicked4" />
+                        </StackLayout>
                         <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Start" Margin="-380,300,-23,0">
                         </StackLayout>
                     </Grid>

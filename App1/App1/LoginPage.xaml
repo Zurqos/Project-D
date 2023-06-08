@@ -46,7 +46,7 @@
                                TextColor="#FFE500"
                                FontAttributes="Bold"
                                FontSize="24" />
-                        <Image Source="C:\Users\Ray\source\repos\Zurqos\Project-D\App1\App1.Droid\img\temporary.png" />
+                      <!--  <Image Source="C:\Users\Ray\source\repos\Zurqos\Project-D\App1\App1.Droid\img\temporary.png" /> -->
 
                         <BoxView BackgroundColor="#FFE500" HeightRequest="1" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" Margin="-80,70,-30,0" />
                         <!-- Vertical line -->

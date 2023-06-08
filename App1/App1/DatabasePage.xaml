@@ -68,8 +68,8 @@
                                        Placeholder="Enter password" 
                                        PlaceholderColor="White"/>
                                 <CheckBox x:Name="isAdmin" Color="White"/>
-                                <Label Text="Is Admin" TextColor="White" />
-                                <Button Text="Show All Buttons" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                <Label Text="Create Admin" TextColor="White" />
+                                <Button Text="Show All Admin Actions" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnButtonClickedshowButtons" />
                                 <StackLayout x:Name="Buttons" IsVisible="False">
                                 <Button Text="Add to Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
