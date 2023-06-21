@@ -58,7 +58,7 @@ namespace App1
             }
             if (!isPressedAdmin && !isPressedUser)
             {
-                await DisplayAlert("Login Failed", "Username or Password is incorrect", "OK");
+                await DisplayAlert("Inloggen gefaald", "Gebruikersnaam of wachtwoord verkeerd", "OK");
             }
         }
 
