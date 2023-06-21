@@ -77,12 +77,12 @@
                                            TextColor="#FFE500"
                                            Placeholder="BTW" 
                                            PlaceholderColor="White"/>
-                                <Button x:Name="ViewResultButton" Text="View result" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                <Button x:Name="ViewResultButton" Text="Resulaten" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="ViewResultButton_Clicked" IsVisible="False"/>
                                 <Label Text="{Binding AnalysisResult}" />
-                                <Button Text="Scan your image" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Scan afbeelding" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="TakePhotoButton_Clicked" />
-                                <Button Text="Save scan" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Scan opslaan" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="ToScanHistory" />
                                 
                                 <Image x:Name="image" IsVisible="False" />
