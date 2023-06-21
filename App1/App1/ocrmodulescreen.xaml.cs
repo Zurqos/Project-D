@@ -53,14 +53,14 @@ namespace App1
                     status = await Permissions.RequestAsync<Permissions.Camera>();
                     if (status != PermissionStatus.Granted)
                     {
-                        await DisplayAlert("Camera Permission", "Permission denied. Unable to access the camera.", "OK");
+                        await DisplayAlert("Camera Toegang", "Toegang geweigerd. Kan camera niet openen", "OK");
                         return;
                     }
                 }
 
                 var mediaOptions = new MediaPickerOptions
                 {
-                    Title = "Take Photo"
+                    Title = "Maak een foto"
                 };
 
                 var photo = await MediaPicker.CapturePhotoAsync(mediaOptions);
@@ -72,19 +72,19 @@ namespace App1
 
                 image.Source = ImageSource.FromStream(() => stream);
 
-                await DisplayAlert("Wait", $"Please wait while your image is being scanned", "Exit");
+                await DisplayAlert("Wacht...", $"Heb geduld, uw foto wordt gescaned", "Verslaat");
 
                 string result = await ReadFile(_computerVisionClient, photo);
                 
                 // Display the extracted text and category
-                await DisplayAlert("Scan Result", $"Image has sucessfully been scanned!\nPress 'View result' to see the result. Press 'Scan Image to scan your image again.\nPress 'Save scan' to save your scan'", "Exit");
-                finalresult = $"Result:\n " + result;
+                await DisplayAlert("Scan Resultaat", $"Afbeelding is succesfol gescanned!\nDruk op 'Resultaten' om de resultaten te zien. Druk op 'Scan Afbeelding' om u afbeelding opnieuw te scannen.\nDruk op 'Opslaan' om uw scan op te slaan", "Verlaten");
+                finalresult = $"Resultaat:\n " + result;
                 resultsofocr.Add(finalresult);
                 ViewResultButton.IsVisible = true;
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"An error occurred: {ex.Message}\n Most likely, photo wasn't a receit or an unreadable receit, please try rescanning", "OK");
+                await DisplayAlert("Error", $"Error: {ex.Message}\n Meest gebruikelijk, uw foto was geen bon of de foto is onleesbaar", "OK");
             }
         }
         
@@ -93,7 +93,7 @@ namespace App1
             
 
 
-                await DisplayAlert("Scan Result", $"{finalresult}", "OK");
+                await DisplayAlert("Resultaten", $"{finalresult}", "OK");
         }
 
 
