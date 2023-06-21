@@ -63,10 +63,11 @@
                                 <Entry Text="" Placeholder="BTW" IsEnabled="True" FontSize="15" TextColor="#FFE500"/> -->
                             <StackLayout Margin="20,60,20,20">
                                 <Entry x:Name="nameEntry"
-                                       Placeholder=" Nieuw Gebruikersnaam" PlaceholderColor="White" />
+                                       Placeholder=" Nieuw Gebruikersnaam" PlaceholderColor="White" TextColor="#FFE500" />
                                 <Entry x:Name="PasswordEntry" 
                                        Placeholder="Nieuw Wachtwoord" 
-                                       PlaceholderColor="White"/>
+                                       PlaceholderColor="White"
+                                       TextColor="#FFE500"/>
                                 <CheckBox x:Name="isAdmin" Color="White"/>
                                 <Label Text="Maak Admin" TextColor="White" />
                                 <Button Text="Alle opties" HeightRequest="40" Style="{StaticResource ButtonStyle}"
@@ -74,13 +75,13 @@
                                 <StackLayout x:Name="Buttons" IsVisible="False">
                                 <Button Text="Voeg toe aan Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnButtonClicked" />
-                                <Button Text="Delete uit Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Verwijder uit Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnDeleteClicked" />
                                 <Button Text="Update in Database" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnUpdateClicked" />
                                 <Button Text="Laat alleen Admins zien" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnShowAdminsClicked" />
-                                <Button Text="Laat non admins zien" HeightRequest="40" Style="{StaticResource ButtonStyle}"
+                                <Button Text="Laat non Admins zien" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnShowNonAdminsClicked" />
                                 <Button Text="Zie iedereen" HeightRequest="40" Style="{StaticResource ButtonStyle}"
                                         Clicked="OnShowAllClicked" />

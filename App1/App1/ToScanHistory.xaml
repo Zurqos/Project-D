@@ -54,12 +54,12 @@
                         <BoxView BackgroundColor="#FFE500" WidthRequest="1" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0" Margin="60,-7,0,0" />
                         <!-- Buttons -->
                         <StackLayout Grid.Row="1" Grid.Column="1" Padding="5,0,0,0" VerticalOptions="CenterAndExpand">
-                            <Label Text="Here are your list of scans:"
+                            <Label Text="Hier is uw lijst met scans"
                                    TextColor="#FFE500"
                                    VerticalOptions="CenterAndExpand"
                                    HorizontalOptions="CenterAndExpand" />
                             <StackLayout>
-                                <Button Text="Display List" Style="{StaticResource ButtonStyle}" Clicked="DisplayListClicked" />
+                                <Button Text="Scan resultaten weergeven" Style="{StaticResource ButtonStyle}" Clicked="DisplayListClicked" />
                                 <Label x:Name="listLabel" />
                             </StackLayout>
                         </StackLayout>

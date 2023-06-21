@@ -63,7 +63,7 @@
                             </StackLayout>
 
                             <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                                <Button Text="Wachtwoord" Style="{StaticResource ButtonStyle}" Margin="0,5,0,10" HeightRequest="40" Clicked="NavigateButton_OnCLickedLogin"/>
+                                <Button Text="Inloggen" Style="{StaticResource ButtonStyle}" Margin="0,5,0,10" HeightRequest="40" Clicked="NavigateButton_OnCLickedLogin"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Vertical" HorizontalOptions="Center">
